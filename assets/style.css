@@ -35,6 +35,18 @@
     margin: 0;
   }
   
+  h2 {
+	font-size: 2em;
+    font-weight: 700;
+    margin: 0 0 .5em;  
+  }
+  
+  h3 {
+	font-size: 1.75em;
+    font-weight: 700;
+    margin: 0 0 .5em;  
+  }
+  
   /* Grouping content
      ========================================================================== */
   
@@ -44,9 +56,11 @@
    */
   
   hr {
+	 border-color: rgba(0,0,0,.1);
     box-sizing: content-box; /* 1 */
     height: 0; /* 1 */
     overflow: visible; /* 2 */
+    margin: 0 0 2em;
   }
   
   /**
@@ -68,6 +82,7 @@
   
   a {
     background-color: transparent;
+    color: #646464;
   }
   
   /**
@@ -141,6 +156,8 @@
   
   img {
     border-style: none;
+    height: auto;
+    max-width: 100%;
   }
   
   /* Forms
@@ -391,6 +408,10 @@
   .background-white {
     background-color: white;
   }
+  
+  .background-gray {
+    background-color: rgba(0,0,0,.08);
+  }
 
   .background-blue {
     background: rgba(9,39,86,1);
@@ -438,6 +459,7 @@
 
   .flex-box {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .flex-box.column {
@@ -447,6 +469,34 @@
   .flex-box.centered {
     align-items: center;
     justify-content: center;
+  }
+  
+  .flex-box.space-between {
+    justify-content: space-between;
+  }
+  
+  .flex-box.stretch {
+    align-items: stretch;
+  }
+ 
+  .flex-box.three-column > * {
+	  width: 30%;
+  }
+  
+  .flex-box.two-column > * {
+	  width: 48%;
+  }
+  
+  .flex-box.two-column.qtr > *:first-child {
+	  width: 35%;
+  }
+  
+  .flex-box.two-column.qtr > * {
+	  width: 63%;
+  }
+  
+  .flex-box.one-column > * {
+    width: 100%;
   }
 
   .flex-item {
@@ -468,6 +518,10 @@
     padding: 1em;
   }
   
+  .more-pad-btm {
+	  margin-bottom: 2em;
+  }
+  
   /* Classes */
   .circle-btn {
 	  border-radius: 50%;
@@ -485,6 +539,7 @@
   .btn {
 	  padding: .75em 1.5em;
 	  position: relative;
+	  text-decoration: none;
   }
   
   .btn * {
@@ -508,6 +563,23 @@
   .btn:hover:before {
 	  background: rgba(0,0,0,.15);
   }
+  
+  .pad-vert {
+	  padding: 2em 0;
+  }
+  
+  .click-check {
+	    cursor: pointer;
+	    display: block;
+	    height: 100%;
+	    margin: 0;
+	    opacity: 0;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    z-index: 3;
+	}
   
   /* Z-Index */ 
 

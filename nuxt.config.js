@@ -13,13 +13,13 @@ module.exports = {
     ],
     meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }]
   },
-  css: ["@/assets/style.css"],
-  plugins: [
-  	{ 
-	  	src: "~plugins/olark.js", 
-	  	ssr: false 
-	}
-  ]
+  rules: [
+	  {
+	   test: /\.svg$/,
+	   loader: 'vue-svg-loader', // `vue-svg` for webpack 1.x
+	  },
+	],
+  css: ["@/assets/style.css"]
 };
 
 //https://nuxtjs.org/

@@ -5,8 +5,8 @@
 	        <div v-on:click="toggleMenu" id="burger" class="nav-left-icon burger-menu-btn z2"><span class="background-blue"></span></div>
 	        <nav id="navMenu" class="z1">
 	            <ul class="column flex-box roboto-slab">
-	                <li v-on:click="navigate"><nuxt-link to="/about">Mission</nuxt-link></li>
-	                <li v-on:click="navigate"><nuxt-link to="/work" >Work</nuxt-link></li>
+	                <li v-on:click="navigate"><nuxt-link to="/about">Support</nuxt-link></li>
+	                <li v-on:click="navigate"><nuxt-link to="/work" >PRO</nuxt-link></li>
 	                <li v-on:click="navigate"><nuxt-link to="/contact" href="#">Contact Us</nuxt-link></li>
 	            </ul>
 	        </nav>
@@ -54,7 +54,7 @@
 	    background: rgba(255,255,255,1);
 	    border-bottom: 1px solid rgba(0,0,0,.1);
         justify-content: space-between;
-        padding: 0 1em;
+        padding: .5em 1em;
         position: fixed;
         	top: 0;
         	left: 0;
