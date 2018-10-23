@@ -5,7 +5,7 @@
 	        <div v-on:click="toggleMenu" id="burger" class="nav-left-icon burger-menu-btn z2"><span class="background-blue"></span></div>
 	        <nav id="navMenu" class="z1">
 	            <ul class="column flex-box roboto-slab">
-	                <li v-on:click="navigate"><nuxt-link to="/support">Support</nuxt-link></li>
+	                <li v-on:click="navigate"><nuxt-link to="/contact">Support</nuxt-link></li>
 	                <li v-on:click="navigate"><nuxt-link to="/contact" href="#">Contact Us</nuxt-link></li>
 	            </ul>
 	        </nav>

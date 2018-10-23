@@ -113,7 +113,7 @@ main .inner-half {
 	position: absolute;
 		right: 0;
 		top: 0;
-	width: 50%;
+	width: 100vw;
 }
 
 main div h2 {
@@ -251,18 +251,21 @@ main div a {
 	 transition: all 1s ease;
 	 transform: rotate(-50deg);
 }
+.rocket-container.hide {
+	display: none;
+}
  .rocket-container.boom {
 	 animation: float 4.25s linear infinite;
 	 transition-delay: 2s; 
 	 margin: -150px -150px 0 0;
-	 right: 50%;
+	 right: 320px;
 	 top: 50%;
 	/*Mobile*/
 }
 
 @media screen and (max-width: 1200px) {
 	 .rocket-container.boom {
-		 right: 55%;
+		 right: 25%;
 		 top: 75%;
 	}
 }
@@ -319,20 +322,23 @@ main div a {
  .smoke-bubbles {
 	 animation: none;
 	 position: absolute;
-	 width: 2000px;
-	 height: 400%;
-	 bottom: -240%;
-	 left: 90%;
+	 width: 500px;
+	 height: 360px;
+	 bottom: -73%;
+	 left: calc(100vw - 357px);
 	 opacity: 0;
 	 background-color: white;
-	 transform: translateX(-50%) scale(0.25) rotate(-22deg);
-	 transition: all 2s ease;
+	 transform: rotate(-31deg);
+	 transition: all 2s ease-in-out;
 	 z-index: 100;
+}
+.smoke-bubbles.hide {
+	display: none;
 }
 @media screen and (max-width: 1200px) {
 	 .smoke-bubbles {
-		 width: 2200px;
-		 left: 93%;
+		 left: calc(100vw - 310px);
+		 bottom: -300px;
 	}
 }
  .smoke-bubbles.boom {

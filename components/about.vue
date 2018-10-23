@@ -43,7 +43,7 @@
                         title: 'Moving your site to Wordpress?',
                         backgroundImage: '/ma-screenshot.jpg',
                         desc: 'Moving over your website from one platform to another can be a challenge, which can often require a lot of time and money. With the Wordpress Migrate Anything plugin, moving over multiple pages, posts, images & documents can be achieved in a few easy steps and in seconds per page.',
-                        link: 'https://vimeo.com/81625407',
+                        link: '/contact',
                         ltitle: 'Watch Video',
                     },                              
                 ],
@@ -54,11 +54,11 @@
                     },
                     {
                         type: 'Pro',
-                        desc: '<ul style="list-style-type: disc;margin: 0 0 0 2em;font-size: 120%"><li style="padding: 0 0 .5em">WP MultiSite</li><li style="padding: 0 0 .5em">Limited Online Support</li><li style="padding: 0 0 .5em">Unlimited page migrations</li></ul><br/><center><a href="/go-pro" class="btn background-blue"><span>Go PRO</span></a></center><br/>',
+                        desc: '<ul style="list-style-type: disc;margin: 0 0 0 2em;font-size: 120%"><li style="padding: 0 0 .5em">WP MultiSite</li><li style="padding: 0 0 .5em">Limited Online Support</li><li style="padding: 0 0 .5em">Unlimited page migrations</li></ul><br/><center><a href="/contact" class="btn background-blue"><span>Go PRO</span></a></center><br/>',
                     },
                     {
                         type: 'Leave the work to us',
-                        desc: '<p>Don&#44;t have the time to migrate your site? Then leave all the work to us!<br/><br/><center><a href="/let-us-do-it" class="btn background-blue"><span>Find out more!</span></a></center></p>',
+                        desc: '<p>Don&#44;t have the time to migrate your site? Then leave all the work to us!<br/><br/><center><a href="/contact" class="btn background-blue"><span>Find out more!</span></a></center></p>',
                     },                              
                 ],
             }
