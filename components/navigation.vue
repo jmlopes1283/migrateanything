@@ -1,12 +1,11 @@
 <template>
     <div id="header" class="site-header background-white top txt-shadow">
     	<div class="inner flex-box centered">
-	        <h1><nuxt-link to="/">Migrate Anything</nuxt-link></h1>
+	        <h1><nuxt-link to="/">Migrate <strong>Anything</strong></nuxt-link></h1>
 	        <div v-on:click="toggleMenu" id="burger" class="nav-left-icon burger-menu-btn z2"><span class="background-blue"></span></div>
 	        <nav id="navMenu" class="z1">
 	            <ul class="column flex-box roboto-slab">
-	                <li v-on:click="navigate"><nuxt-link to="/about">Support</nuxt-link></li>
-	                <li v-on:click="navigate"><nuxt-link to="/work" >PRO</nuxt-link></li>
+	                <li v-on:click="navigate"><nuxt-link to="/support">Support</nuxt-link></li>
 	                <li v-on:click="navigate"><nuxt-link to="/contact" href="#">Contact Us</nuxt-link></li>
 	            </ul>
 	        </nav>
@@ -54,7 +53,7 @@
 	    background: rgba(255,255,255,1);
 	    border-bottom: 1px solid rgba(0,0,0,.1);
         justify-content: space-between;
-        padding: .5em 1em;
+        padding: .5em 0;
         position: fixed;
         	top: 0;
         	left: 0;
@@ -75,7 +74,7 @@
     }
 
     h1 a {     
-	    color: inherit;
+	    color: rgba(9, 39, 86, 1);
         text-decoration: none;
     }
     
@@ -152,7 +151,7 @@
     }
 
     nav ul li a{
-        color: inherit;
+        color: rgba(9, 39, 86, 1);
         font-weight: 700;
         overflow: hidden;
         padding: 1em;
@@ -166,7 +165,7 @@
 	    height: 3px;
 	    position: absolute;
 	    	left: 0;
-	    	bottom: 3px;
+	    	bottom: -4px;
 	    transition: all .25s ease;
 	    width: 0;
     }
@@ -233,6 +232,18 @@
     	h1 {
 	    	line-height: 60px
     	}
+    	nav ul li{
+            padding: .5em 0;
+        }
+
+        nav ul li a {          
+	        padding: 0; 
+	        text-decoration: none;
+        }
+        
+        nav ul li a:hover {
+	        border-bottom: 0;
+        }
     }
     
 

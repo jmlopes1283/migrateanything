@@ -4,105 +4,14 @@
      
         <nuxt />        
 
-        <subfooter></subfooter>
-
-        <footer class="layer end background-blue txt-gray" id="footer">
+        <footer class="layer end background-dark-gray txt-white" id="footer">
 			<div class="inner">
-				<div class="flex-box space-between flex-start margin">
-					<div>
-						<input class="footer-check click-check" type="checkbox">
-						<h4>Helpful Links</h4>
-						<ul>
-							<li>
-								<a href="">Contact</a>
-							</li>
-							<li>
-								<a href="">Support PC</a>
-							</li>
-							<li>
-								<a href="">Emergency Information</a>
-							</li>
-							<li>
-								<a href="">Student Consumer Information</a>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<input class="footer-check click-check" type="checkbox">
-						<h4>Academics &amp; Apply</h4>
-						<ul>
-							<li>
-								<a href="https://admission.providence.edu/apply/">Apply</a>
-							</li>
-							<li>
-								<a href="https://academics.providence.edu/departments/">Departments &amp; Programs</a>
-							</li>
-							<li>
-								<a href="https://academics.providence.edu/calendar/">Academic Calendar</a>
-							</li>
-							<li>
-								<a href="https://pml.providence.edu">Library</a>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<input class="footer-check click-check" type="checkbox">
-						<h4>People &amp; Places</h4>
-						<ul>
-							<li>
-								<a href="https://about.providence.edu/list/offices-services/">Offices &amp; Services Directory</a>
-							</li>
-							<li>
-								<a href="https://www.providence.edu/search-email/">People Directory</a>
-							</li>
-							<li>
-								<a href="https://admission.providence.edu/visit/directions/">Maps &amp; Directions</a>
-							</li>
-							<li>
-								<a href="https://admission.providence.edu/visit">Visit</a>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<input class="footer-check click-check" type="checkbox">
-						<h4>Facts &amp; Info</h4>
-						<ul>
-							<li>
-								<a href="https://about.providence.edu/fast-facts/">Fast Facts</a>
-							</li>
-							<li>
-								<a href="http://careers.providence.edu/">Jobs</a>
-							</li>
-							<li>
-								<a href="https://mission-ministry.providence.edu/chaplain/campus-ministry/worship/">Mass Schedule</a>
-							</li>
-							<li>
-								<a href="https://safety.providence.edu/dist/d/46/files/2018/02/safety-report.pdf">Annual Security Report</a>
-							</li>
-							<li>
-								<a href="https://sexual-harassment.providence.edu/">Title IX &amp; Sexual Harassment</a>
-							</li>
-						</ul>
-					</div>
-				</div>
 				<div class="flex-box space-between copy margin">
-					<p><img src="assets/images/main-logo.svg?v=1.0" class="footer-logo alignleft" alt="footer logo"> 1 Cunningham Square, Providence, RI 02918 USA, 401.865.1000</p>
-					<p><span class="copyright">Copyright ©{{ new Date().getFullYear() }}.</span> <a href="http://providence.edu" target="_blank"><strong>Providence College</strong></a>. <a href="https://www.providence.edu/terms-of-use/">Terms of Use</a> | <a href="https://www.providence.edu/providence-college-privacy-policy/">Privacy Policy</a></p>
-				</div>
-				<hr class="margin">
-				<div class="flex-box space-between copy">
-					<p>If you are having trouble viewing or accessing these web pages, please email our <a href="mailto:mbevilac@providence.edu">Web Accessibility Coordinator</a></p>
-					<p>Page maintained by: <a href="https://blogs.providence.edu/web">PC Web Services</a> | <a href="https://www.providence.edu/about-this-site">About This Site</a></p>
-					<div class="flex-box icons flex-end txt-center">
-						<a href="" class="icon fa-linkedin-in fab"></a>
-						<a href="" class="icon icon-friars-logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></a>
-						<a href="" class="icon icon-my-pc"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span></a>
-					</div>
+					<p><span class="copyright">Copyright ©{{ new Date().getFullYear() }}.</span> <a href="http://neplugins.com" target="_blank"><strong>NE Plugins</strong></a> | <nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link></p>
+					<p>Page maintained by: <a href="http://iwebri.com">iWebRI</a></p>
 				</div>
 			</div>
 		</footer>
-        
-        <olark />
 
     </div>
 
@@ -111,12 +20,10 @@
 
 <script>
 import Navigation from "../components/navigation";
-import Olark from "../components/olark";
 
 export default {
   components: {
     Navigation,
-    Olark,
   },
   head: {
     title: "Migrate Anything"
@@ -154,8 +61,10 @@ footer img.alignleft {
 }
 
 footer a {
+	color: white;
 	font-weight: bold;
 	position: relative;
+	margin: 0 5px;
 	text-decoration: none;
 }
 

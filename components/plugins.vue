@@ -10,9 +10,9 @@
 	                class="background-white">
 	                <img :src="item.backgroundImage" class="aligncenter ico-plugins"/>
 	
-	                <h3><nuxt-link :to="item.link">{{ item.title }}</nuxt-link></h3>    
+	                <h3><a v-bind:href="item.link">{{ item.title }}</a></h3>    
 	                <p>{{ item.desc }}</p>                         
-	                
+	                <a v-bind:href="item.link" class="btn background-blue"><span>View Plugin</span></a>
 	            </li>
 	        </ul>
         </div>
@@ -33,9 +33,10 @@
                         link: 'https://wordpress.org/plugins/ne-alt-tag/',
                     },
                     {
-                        title: 'Unused Media Finder',
+                        title: 'Unused Image Finder',
                         backgroundImage: '/ico-recycle.png',
-                        link: '/lane-yacht-management-group',
+                        desc: 'NE Unused Image scans your Wordpress websites media folder and lets you know what images are not being used on any pages. This will also give you the option to review and delete each image for fast and easy cleanup.',
+                        link: '/ne-unused-media',
                     },                              
                 ],
             }
@@ -72,17 +73,35 @@
 	    border: 1px solid rgba(0,0,0,.1);
         transition: all 1s;
     }
+    
+    ul li h3 {
+	    margin-bottom: .25em;
+    }
 	
 	ul li h3,
 	ul li p{
 		padding: 0 15px;
 	}
 	
-    ul li a {
-	    border-bottom: 3px solid #6bffe6;   
+	ul li p{
+		margin-bottom: 3em;
+	}
+	
+    ul li a {  
 	    padding: 0 0;  
         text-decoration: none;
     }
+    
+    .btn {
+	  border-bottom: none;
+	  padding: .75em 1.5em;
+	  position: relative;
+	  	top: -1.5em;
+	}
+	
+	ul li .btn {
+		margin: 0 0 2em 15px;
+	}
     
     ul li a:hover {
 	    border-bottom: none;
@@ -97,11 +116,14 @@
     }
 
     @media( max-width: 1200px ){
-        h2 {
-            font-size: 1em;
-        }
         ul{
             display: block;
+        }
+        ul.flex-box {
+	        display: flex;
+        }
+        ul.flex-box > li {
+	        margin-bottom: 1em;
         }
     }
 

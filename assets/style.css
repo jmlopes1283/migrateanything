@@ -7,6 +7,7 @@
  */
 
  html {
+	 background: rgba(64,64,64,1);
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
   }
@@ -56,7 +57,7 @@
    */
   
   hr {
-	 border-color: rgba(0,0,0,.1);
+	 border-color: rgba(0,0,0,.25);
     box-sizing: content-box; /* 1 */
     height: 0; /* 1 */
     overflow: visible; /* 2 */
@@ -102,7 +103,7 @@
   
   b,
   strong {
-    font-weight: bolder;
+    font-weight: 900;
   }
   
   /**
@@ -410,7 +411,11 @@
   }
   
   .background-gray {
-    background-color: rgba(0,0,0,.08);
+    background-color: rgba(202,202,202,1);
+  }
+  
+  .background-dark-gray {
+    background-color: rgba(64,64,64,1);
   }
 
   .background-blue {
@@ -471,6 +476,18 @@
     justify-content: center;
   }
   
+  .flex-box.flex-end {
+    align-items: flex-end;
+  }
+  
+  @media screen and (max-width: 800px) and (orientation: portrait) {
+		main.flex-box.centered {
+			align-items: end; 
+			align-content: flex-end;
+			justify-content: flex-end;
+		}
+	}
+  
   .flex-box.space-between {
     justify-content: space-between;
   }
@@ -507,9 +524,13 @@
     margin: auto;
     max-width: 1100px;
     position: relative;
-    width: 100%;
+    width: 97%;
   }
-
+  
+  .spacing {
+	  padding: .5em;
+  }
+  
   .padded {
     padding: .5em;
   }
@@ -537,6 +558,7 @@
   }
   
   .btn {
+	  border-bottom: none;
 	  padding: .75em 1.5em;
 	  position: relative;
 	  text-decoration: none;
@@ -606,6 +628,21 @@
 		top: 0;
 	}
 }
+
+@keyframes fademobile {
+	0% {
+		opacity: 0;
+		bottom: -100vh;
+	}
+	50% {
+		opacity: 0;
+		bottom: -100vh;
+	}
+	100% {
+		opacity: 1;
+		bottom: 3em;
+	}
+}
   
   /* Backgrounds */
   .background-full {    
@@ -623,3 +660,32 @@
   .parallax {
     background-attachment: fixed;
   }
+
+@media screen and (max-width: 800px){
+	
+	.flex-box > *,
+	.flex-box.two-column > *,
+	.flex-box.three-column > *,
+	.flex-box.qtr > *,
+	.flex-box.two-column.qtr > *:first-child,
+	.flex-box.two-column.qtr > * {
+		width: 100%;
+	}
+	
+	.flex-box > .inner {
+		width: 97%
+	}
+	
+	.flex-box.two-column.qtr {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	
+	.flex-box.two-column.qtr > *:first-child {
+		margin-bottom: 2em;
+	}
+	
+	.flex-box.two-column.qtr > *:last-child {
+		margin-bottom: 0;
+	}
+}

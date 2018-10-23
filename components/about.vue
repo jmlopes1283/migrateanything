@@ -10,16 +10,25 @@
 					 <div class="spacing">
 					 <h2>{{ item.title }}</h2>
 					 <p class="more-pad-btm">{{ item.desc }}</p>
-	                <nuxt-link class="btn background-blue tut-vid" :to="item.link"><span>{{ item.ltitle }}</span></nuxt-link>   
+	                <a class="btn background-blue tut-vid" v-bind:href="item.link"><span>{{ item.ltitle }}</span></a>   
 	                </div>
                 </div>
                 <div>
-                	<nuxt-link class="play-btn aligncenter tut-vid" :to="item.link">
+                	<a class="play-btn aligncenter tut-vid" v-bind:href="item.link">
                 		<img :src="item.backgroundImage" class="ico-offset"/>
-                	</nuxt-link>
+                	</a>
                 </div>
             </div>
             <hr/>
+            <h2><center>Pricing Plans</center></h2>
+            <div class="flex-box three-column space-between">
+	            <div v-for="(item, key) in plans" 
+	                :key="key"
+	                 class="background-gray plan-box">
+					 <h3 class="spacing">{{item.type}}</h3>
+					 <div v-html="item.desc" class="spacing"></div>
+	            </div>
+	        </div>
         </div>
     </div>
 
@@ -36,6 +45,20 @@
                         desc: 'Moving over your website from one platform to another can be a challenge, which can often require a lot of time and money. With the Wordpress Migrate Anything plugin, moving over multiple pages, posts, images & documents can be achieved in a few easy steps and in seconds per page.',
                         link: 'https://vimeo.com/81625407',
                         ltitle: 'Watch Video',
+                    },                              
+                ],
+                plans: [
+                    {
+                        type: 'Free',
+                        desc: '<ul style="list-style-type: disc;margin: 0 0 0 2em;font-size: 120%"><li style="padding: 0 0 .5em"><del>WP MultiSite</del></li><li style="padding: 0 0 .5em"><del>Online Support</del></li><li style="padding: 0 0 .5em">Migrate up to 30 pages</li></ul>',
+                    },
+                    {
+                        type: 'Pro',
+                        desc: '<ul style="list-style-type: disc;margin: 0 0 0 2em;font-size: 120%"><li style="padding: 0 0 .5em">WP MultiSite</li><li style="padding: 0 0 .5em">Limited Online Support</li><li style="padding: 0 0 .5em">Unlimited page migrations</li></ul><br/><center><a href="/go-pro" class="btn background-blue"><span>Go PRO</span></a></center><br/>',
+                    },
+                    {
+                        type: 'Leave the work to us',
+                        desc: '<p>Don&#44;t have the time to migrate your site? Then leave all the work to us!<br/><br/><center><a href="/let-us-do-it" class="btn background-blue"><span>Find out more!</span></a></center></p>',
                     },                              
                 ],
             }
@@ -111,6 +134,10 @@
 	    border: 1px solid rgba(0,0,0,.1);
         transition: all 1s;
     }
+
+	.plan-box ul li{
+		padding: 0 0 .5em 10px;
+	}
 	
 	ul li h3,
 	ul li p{
@@ -134,13 +161,80 @@
     ul li:hover {
         background-size: 100%;
     }
-
+	
+	.plan-box {
+		border: 1px solid rgba(0,0,0,.25);
+	}
+	
+	.plan-box h3 {
+		letter-spacing: 0.026em;
+		position: relative;
+		text-align: center;
+	}
+	
+	.plan-box h3:after {
+		border-top: 20px solid transparent;
+		border-left: 20px solid transparent;
+	    content: '';
+	    display: block;
+	    height: 0;
+	    position: absolute;
+	    	bottom: -12px;
+	    	left: calc(50% - 5px);
+	    transform: rotate(45deg);
+	    width: 0;
+	    z-index: 1;
+	}
+	
+	.plan-box:first-child h3 {
+		background: rgba(64,64,64,1);
+		color: white;
+		text-transform: uppercase;
+	}
+	
+	.plan-box:first-child h3:after {
+		border-bottom: 20px solid rgba(64,64,64,1);
+	}
+	
+	.plan-box:nth-child(2) h3 {
+		background: rgba(9, 39, 86, 1);
+		color: white;
+		text-transform: uppercase;
+	}
+	
+	.plan-box:nth-child(2) h3:after {
+		border-bottom: 20px solid rgba(9, 39, 86, 1);
+	}
+	
+	.plan-box:last-child h3 {
+		background: #6bffe6;
+		color: #092756;
+	}
+	
+	.plan-box:last-child h3:after {
+		border-bottom: 20px solid #6bffe6;
+	}
+	
+	.plan-box:last-child > div.spacing {
+		padding: 1em 2em;
+	}
+	
+	.plan-box .btn {
+		margin-bottom: 3em;
+	}
+	
     @media( max-width: 1200px ){
-        h2 {
-            font-size: 1em;
-        }
         ul{
             display: block;
+        }
+    }
+    
+    @media( max-width: 800px ){
+        .plan-box {
+            margin-bottom: 1em;
+        }
+        .plan-box:last-child {
+            margin-bottom: 0;
         }
     }
 
