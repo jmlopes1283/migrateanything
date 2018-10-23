@@ -3,7 +3,7 @@
         <main class="flex-box centered" id="main">
             <div class="inner">
 	            <div class="column intro-text txt-left txt-white">
-	                <h2 class="txt-shadow">Migrate 
+	                <h2>Migrate 
 	                	<div class="words rotate">
 							<span>easier</span>
 							<span>faster</span>
@@ -496,6 +496,9 @@ main div a {
 	}
 	main div .txt-shadow {
 		text-shadow: none;
+	}
+	main div h2 {
+		color: #092756;
 	}
 	.words span:first-child { 
 		animation-delay: 2.5s; 
