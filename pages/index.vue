@@ -3,7 +3,7 @@
         <main class="flex-box centered" id="main">
             <div class="inner">
 	            <div class="column intro-text txt-left txt-white">
-	                <h2>Migrate 
+	                <h2 class="txt-shadow">Migrate 
 	                	<div class="words rotate">
 							<span>easier</span>
 							<span>faster</span>
