@@ -12,7 +12,7 @@
 				</div>
 			</div>
 		</footer>
-
+		<div v-html="scripts"></div>
     </div>
 
 
@@ -27,6 +27,11 @@ export default {
   },
   head: {
     title: "Migrate Anything"
+  },
+  data: function() {
+	return {
+		scripts: "<script src='/js/load.js'><\/script>",
+	}
   }
 };
 </script>
