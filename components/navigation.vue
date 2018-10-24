@@ -1,7 +1,7 @@
 <template>
     <div id="header" class="site-header background-white top txt-shadow">
     	<div class="inner flex-box centered">
-	        <h1><a href="/">Migrate <strong>Anything</strong></a></h1>
+	        <h1><a href="/" class="flex-box centered"><img src="/main-logo.png" class="logo-icon" alt="NE Migrate Anything Plugin Main Logo"/><span>Migrate <strong>Anything</strong></span></a></h1>
 	        <div v-on:click="toggleMenu" id="burger" class="nav-left-icon burger-menu-btn z2"><span class="background-blue"></span></div>
 	        <nav id="navMenu" class="z1">
 	            <ul class="column flex-box roboto-slab">
@@ -73,13 +73,39 @@
 	    justify-content: space-between;
     }
 
-    h1 a {     
+    h1 a.flex-box.centered {     
 	    color: rgba(9, 39, 86, 1);
+	    justify-content: flex-start;
         text-decoration: none;
+    }
+    
+    h1 a > * {
+	    transition: all .25s ease;
+    }
+    
+    h1 a span {
+	    opacity: 1;
+	    width: auto;
+    }
+    
+    .logo-icon {
+	    filter: none;
+	    float: left;
+	    height: auto;
+	    margin: 0 10px 0 0;
+	    width: 35px;
     }
     
     div.site-header.top h1 a {
 	    color: white;
+    }
+    
+    div.site-header.top h1 a img {
+	    filter: brightness(0) invert(1);
+    }
+    
+    div.site-header.top h1 a span {
+	    opacity: 0;
     }
 
 	.burger-menu-btn.open{
