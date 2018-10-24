@@ -30,7 +30,7 @@ export default {
   },
   data: function() {
 	return {
-		scripts: "<script src='/js/load.js'><\/script>",
+		scripts: "<script src='/js/load.js'><\/script><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700' />",
 	}
   }
 };
