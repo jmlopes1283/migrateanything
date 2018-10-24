@@ -40,7 +40,9 @@
         <about number="1"></about>
         
         <plugins number="2"></plugins>
-
+		
+		<div v-html="home"></div>
+		
     </div>
 
 </template>
@@ -53,6 +55,11 @@ export default {
     About,
     Plugins
   },
+  data: function() {
+	return {
+		home: "<script src='/js/home.js'><\/script>",
+	}
+  }
 };
 
 </script>
