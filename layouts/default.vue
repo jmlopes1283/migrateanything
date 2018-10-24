@@ -12,9 +12,14 @@
 				</div>
 			</div>
 		</footer>
+		
+		<div id="vidEl" class="flex-box one-column centered lightbox">
+        	<div v-on:click="closeVid" id="closeBtn" class="close-btn">close[x]</div>
+        	<div id="vidInner" class="inner"></div>
+        </div>
+        
 		<div v-html="scripts"></div>
     </div>
-
 
 </template>
 
@@ -28,6 +33,20 @@ export default {
   head: {
     title: "Migrate Anything"
   },
+  methods: {
+	    closeVid: function(){
+			document.body.style.removeProperty('overflow');
+	        document.getElementById('vidEl').classList.remove('active');
+	        
+	        setTimeout(function(){ 
+				document.getElementById('vidInner').innerHTML ="";
+			}, 250);
+	
+	        return false;
+	        
+	    },
+	
+	},
   data: function() {
 	return {
 		scripts: "<script src='/js/load.js'><\/script><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700' />",
