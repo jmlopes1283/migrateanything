@@ -1,7 +1,7 @@
 <template>
     <div id="header" class="site-header background-white top txt-shadow">
     	<div class="inner flex-box centered">
-	        <h1><nuxt-link to="/">Migrate <strong>Anything</strong></nuxt-link></h1>
+	        <h1><a href="/">Migrate <strong>Anything</strong></a></h1>
 	        <div v-on:click="toggleMenu" id="burger" class="nav-left-icon burger-menu-btn z2"><span class="background-blue"></span></div>
 	        <nav id="navMenu" class="z1">
 	            <ul class="column flex-box roboto-slab">

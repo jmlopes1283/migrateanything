@@ -13,6 +13,7 @@ function scrollFunc() {
 }
 
 function loadFunc() {
+	document.getElementById("main").classList.remove("loading");
 	document.getElementById("main").classList.remove("active");
 	document.getElementById("rocket").classList.remove("boom");
 	document.getElementById("smoke").classList.remove("boom");

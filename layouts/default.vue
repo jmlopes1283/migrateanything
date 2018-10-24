@@ -119,7 +119,7 @@ footer > div > div > div > .footer-check {
   display: none;
 }
 
-@media ( max-width: 700px ){
+@media ( max-width: 800px ){
 	footer > div > div > div {
 		position: relative;
 	}
@@ -163,7 +163,8 @@ footer > div > div > div > .footer-check {
 	}
 	
 	footer .copy > p {
-		line-height: 24px;
+		font-size: 120%;
+		text-align: center
 	}
 	
 	footer img, 
