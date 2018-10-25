@@ -10,11 +10,11 @@
 					 <div class="spacing">
 					 <h2>{{ item.title }}</h2>
 					 <p class="more-pad-btm">{{ item.desc }}</p>
-	                <a class="btn background-blue tut-vid" v-bind:href="item.link"><span>{{ item.ltitle }}</span></a>   
+	                <a v-on:click="vimeoVid(item.link)" class="btn background-blue tut-vid" id="video"><span>{{ item.ltitle }}</span></a>   
 	                </div>
                 </div>
                 <div>
-                	<a class="play-btn aligncenter tut-vid" v-bind:href="item.link">
+                	<a v-on:click="vimeoVid(item.link)" class="play-btn aligncenter tut-vid" id="video">
                 		<img :src="item.backgroundImage" class="ico-offset"/>
                 	</a>
                 </div>
@@ -30,6 +30,7 @@
 	            </div>
 	        </div>
         </div>
+        
     </div>
 
 </template>
@@ -43,7 +44,7 @@
                         title: 'Moving your site to Wordpress?',
                         backgroundImage: '/ma-screenshot.jpg',
                         desc: 'Moving over your website from one platform to another can be a challenge, which can often require a lot of time and money. With the Wordpress Migrate Anything plugin, moving over multiple pages, posts, images & documents can be achieved in a few easy steps and in seconds per page.',
-                        link: '/contact',
+                        link: 'https://player.vimeo.com/video/293802639',
                         ltitle: 'Watch Video',
                     },                              
                 ],
@@ -65,16 +66,24 @@
         },
         methods: {
 
-            backgroundImage: function( image ){
-
-                if( image == '' ) {
-                    return '';
-                }
-
-                return "background-image: url('"+ image +"');";
-            }
-
-        },
+		    vimeoVid: function(link){
+		 
+		        document.body.style.overflow = "hidden";
+		        document.getElementById('vidInner').innerHTML ="";
+		        
+		        setTimeout(function(){ 
+					document.getElementById('vidInner').innerHTML ="<iframe src='"+link+"?autoplay=1'></iframe>";
+				}, 10);
+		        
+		        setTimeout(function(){ 
+					document.getElementById('vidEl').classList.add('active');
+				}, 150);
+		
+		        return false;
+		        
+		    },
+		
+	    },
 
         props: [
             'number',
@@ -96,6 +105,7 @@
     }
     
     .play-btn {
+	    cursor: pointer;
 	    position: relative;  
     }
     
@@ -121,6 +131,21 @@
 	    position: absolute;
 	    	top: calc(50% - 10px);
 	    	left: calc(50% - 10px);
+	    transition: all .25s ease;
+	    width: 0;
+	    z-index: 1;
+    }
+    
+    .play-btn:hover:after {
+		border-top: 26px solid transparent;
+		border-bottom: 26px solid transparent;
+		border-left: 36px solid white;
+	    content: '';
+	    display: block;
+	    height: 0;
+	    position: absolute;
+	    	top: calc(50% - 13px);
+	    	left: calc(50% - 13px);
 	    width: 0;
 	    z-index: 1;
     }
@@ -237,6 +262,5 @@
             margin-bottom: 0;
         }
     }
-
 
 </style>

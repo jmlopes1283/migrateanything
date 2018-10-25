@@ -85,6 +85,7 @@
   a {
     background-color: transparent;
     color: #646464;
+    cursor: pointer;
   }
   
   /**
@@ -637,6 +638,54 @@
   .z2 {
     z-index: 2;
   }
+  
+  /* Lightbox */
+  .lightbox {
+	    background: rgba(0,0,0,0);
+	    display: none;
+	    height: 100vh;
+	    position: fixed;
+	    	left: 0;
+	    	top: 0;
+	    width: 100vw;
+	    z-index: 1000;
+    }
+    
+    .lightbox.active {
+	    background: rgba(0,0,0,.8);
+	    display: block;
+    }
+    
+    	.lightbox > .close-btn {
+			color: white;
+			cursor: pointer;
+			display: inline-block;
+			position: absolute;
+				right: 1.5em;
+				top: .5em;
+			text-align: right;
+			width: auto;
+			z-index: 2;
+    	}
+    
+    	.lightbox.flex-box.one-column > .inner {
+	    	height: 100%;
+	    	top: 100%;
+	    	position: relative;
+	    	transition-delay: 4s;
+	    	transition: all .25s ease;
+	    	z-index: 1;
+    	} 
+    	
+    	.lightbox.active.flex-box.one-column > .inner {
+	    	top: 0;
+    	}
+    	
+    		.lightbox > .inner > iframe {
+			    border: none;
+			    height: 100%;
+			    width: 100%;
+    		}
   
   /* Animations */
 @keyframes fadebottom {
