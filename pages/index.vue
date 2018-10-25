@@ -455,7 +455,6 @@ main div a {
 	main > .inner {
 		animation: none;
 		opacity: 0;
-			left: 1.5%;
 			bottom: -7em;
 		transition: all .5s ease;
 		z-index: 10;
